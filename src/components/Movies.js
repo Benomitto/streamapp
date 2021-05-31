@@ -1,14 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
-
-function Viewers(){
+import {selectMovies} from '../features/movie/movieSlice'
+import {useSelector} from 'react-redux'
+function Movies(){
+	const movies = useSelector(selectMovies);
 	return(
 	<Container>
 		<h4>Recommended For You</h4>
 		<Content>
-			<Wrap>
+		{movies && 
+			movies.map((movie)=>(<Wrap>
 				<img src="https://i.ytimg.com/vi/mFBJtuQ1Llc/maxresdefault.jpg"/>
 			</Wrap>
+			
+			
+		))}
 			
 			<Wrap>
 				<img src="https://www.sportsnet.ca/wp-content/uploads/2021/02/atletico-madrid-feb-8-1040x572.jpg"/>
@@ -27,7 +33,7 @@ function Viewers(){
 	</Container>
 	)
 }
-export default Viewers
+export default Movies
 
 const Container = styled.div`
 padding: 30px 0 26px;

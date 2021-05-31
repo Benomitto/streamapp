@@ -9,7 +9,7 @@ const movieSlice = createSlice({
 	initialState,
 	reducers:{
 		setMovies:(state,action)=>{
-			state.movies=actual.payload;
+			state.movies=action.payload;
 		}
 	}
 })
