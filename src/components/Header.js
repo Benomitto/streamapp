@@ -48,7 +48,7 @@ function Header(){
 	return(
 	
 		<Nav>
-			<Logo src="https://www.vhv.rs/dpng/d/487-4872968_stream-realty-partners-logo-hd-png-download.png" />
+			<Logo src="/images/logo.svg" />
 			{!userName?(<LoginContainer> <Login onClick={signIn}>Login</Login> </LoginContainer>):
 			<>
 				<NavMenu>
